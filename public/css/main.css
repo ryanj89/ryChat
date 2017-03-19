@@ -3,15 +3,29 @@
 
 body {
   font-family: 'Lato', sans-serif;
-  background-color: #086375; }
+  font-size: 16px;
+  background-color: #303947; }
+
+.material-icons {
+  color: #1DD3B0;
+  margin-left: 10px; }
+
+.italic {
+  font-style: italic;
+  font-weight: 300; }
 
 nav {
   background-color: #005377; }
 
+.main {
+  margin-bottom: 0; }
+
 .new-user-card {
-  color: #1DD3B0;
+  color: #F7F9F8;
   text-align: center;
-  background: #005377; }
+  margin: 20px auto;
+  background: #303947;
+  width: 420px; }
 
 #new-user-form {
   margin: 15px; }
@@ -20,26 +34,44 @@ nav {
   width: 100%; }
 
 .user-section {
-  background-color: #B7B5B3;
-  height: 82vh; }
+  color: #F7F9F8; }
+
+#user-list {
+  min-height: 360px; }
+  #user-list li {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px auto; }
 
 .message-area {
+  position: relative;
+  padding: 15px;
   background: #F7F9F8;
   height: 70vh;
   overflow-y: scroll; }
 
+.typing-notification {
+  position: absolute;
+  bottom: 0; }
+
 #chat-message-form {
-  background: #B7B5B3;
+  background: #303947;
+  color: #F7F9F8;
   padding: 3px;
   width: 100%; }
+
+.message-user {
+  color: #1DD3B0; }
 
 #messages {
   list-style-type: none;
   margin: 0;
   padding: 0; }
 
-#messages li {
+#messages li,
+#messages h5 {
   background: #F7F9F8;
-  padding: 5px 10px; }
+  padding: 5px 10px;
+  margin-top: 0; }
 
 /*# sourceMappingURL=main.css.map */

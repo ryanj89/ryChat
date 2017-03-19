@@ -8,6 +8,7 @@
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <!-- Styles -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
@@ -23,11 +24,11 @@
     </header>
 
     <main>
-        <div class="container">
-            <div class="row">
+        <div class="container-fluid">
+            <div class="main row">
 
                 <!-- New user Section -->
-                <section class="new-user-card section card col s12">
+                <section class="new-user-card section card">
                     <h4>Welcome to ryChat!</h4>
                     <br>
                     <h5>Please enter your name to get started:</h5>
@@ -44,9 +45,15 @@
                 <div class="row">
                     <section class="chat-section hide section">
 
-                        <div class="user-section col s12 m3">
+                        <div class="user-section section col s12 m3">
                             <h5>Users</h5>
+
+                            <div class="divider"></div>
                             <ul id="user-list"></ul>
+
+                            <h5>Direct Messages</h5>
+                            <div class="divider"></div>
+
                         </div>
 
                         <!-- Messages -->
@@ -54,32 +61,34 @@
                             <div class="message-area">
                                 <ul id="messages"></ul>
 
+                                <p class="typing-notification italic">Test</p>
                             </div>
 
                             <div class="container-fluid">
-
                                 <div class="row">
-                                    <form id="chat-message-form">
-                                        <div class="input-field inline col s12">
-                                            <input id="userMessage" autocomplete="off" />
-                                            <button class="btn">Send</button>
+                                    <div class="chat-message-input col s12">
+                                        <form id="chat-message-form">
+                                            <div class="input-field">
+                                                <input id="userMessage" autocomplete="off" />
 
-                                        </div>
-                                    </form>
+                                                <button class="btn">Send</button>
+                                            </div>
 
+                                        </form>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
-
                     </section>
-
                 </div>
-
             </div>
         </div>
-
     </main>
+
+    <footer class="main-footer">
+
+   </footer>
 
     <!-- Scripts -->
     <script src="/socket.io/socket.io.js" charset="utf-8"></script>
