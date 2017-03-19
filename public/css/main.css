@@ -19,14 +19,18 @@ nav {
 #new-user-btn {
   width: 100%; }
 
-.chat-section {
-  margin-top: 0; }
+.user-section {
+  background-color: #B7B5B3;
+  height: 82vh; }
+
+.message-area {
+  background: #F7F9F8;
+  height: 70vh;
+  overflow-y: scroll; }
 
 #chat-message-form {
-  background: #465765;
+  background: #B7B5B3;
   padding: 3px;
-  position: fixed;
-  bottom: 0;
   width: 100%; }
 
 #messages {
@@ -35,7 +39,7 @@ nav {
   padding: 0; }
 
 #messages li {
-  background: #fcfcfc;
+  background: #F7F9F8;
   padding: 5px 10px; }
 
 /*# sourceMappingURL=main.css.map */

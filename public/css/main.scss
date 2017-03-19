@@ -3,6 +3,7 @@ $blue: #005377;
 $blue-green: #086375;
 $teal: #1DD3B0;
 $dark-grey: #384D48;
+$light-grey: #B7B5B3;
 
 * {
   box-sizing: border-box;
@@ -50,15 +51,23 @@ nav {
 }
 
 // Chat room
-.chat-section {
-  margin-top: 0;
+.user-section {
+  background-color: $light-grey;
+  height: 82vh;
 }
-
+.chat-section {
+  // background: $light-grey;
+  // width: 100%;
+  // height: 80vh;
+}
+.message-area {
+  background: #F7F9F8;
+  height: 70vh;
+  overflow-y: scroll;
+}
 #chat-message-form {
-  background: #465765;
+  background: $light-grey;
   padding: 3px;
-  position: fixed;
-  bottom: 0;
   width: 100%;
 }
 
@@ -69,7 +78,7 @@ nav {
 }
 
 #messages li {
-  background: #fcfcfc;
+  background: #F7F9F8;
   padding: 5px 10px;
 }
 

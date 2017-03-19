@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,43 +14,70 @@
     <link rel="stylesheet" href="/css/main.css">
 </head>
 
-  <body>
+<body>
+
+    <header>
+        <nav class="main-nav">
+
+        </nav>
+    </header>
 
     <main>
-      <div class="container-fluid">
-         <div class="row">
+        <div class="container">
+            <div class="row">
 
-            <!-- New user Section -->
-            <section class="new-user-card section card col s12">
-                <h4>Welcome to ryChat!</h4>
-                <br>
-                <h5>Please enter your name to get started:</h5>
-                <form id="new-user-form">
-                   <div class="input-field">
+                <!-- New user Section -->
+                <section class="new-user-card section card col s12">
+                    <h4>Welcome to ryChat!</h4>
+                    <br>
+                    <h5>Please enter your name to get started:</h5>
+                    <form id="new-user-form">
+                        <div class="input-field">
 
-                      <input id="user-name" type="text" name="user-name" autocomplete="off">
-                   </div>
-                   <button id="new-user-btn" class="waves-effect waves-light btn" type="submit">Let's Go!</button>
-                </form>
-            </section>
+                            <input id="user-name" type="text" name="user-name" autocomplete="off">
+                        </div>
+                        <button id="new-user-btn" class="waves-effect waves-light btn" type="submit">Let's Go!</button>
+                    </form>
+                </section>
 
-            <!-- Chat section -->
-            <section class="chat-section hide section">
+                <!-- Chat section -->
+                <div class="row">
+                    <section class="chat-section hide section">
 
-            <!-- Messages -->
-            <ul id="messages"></ul>
+                        <div class="user-section col s12 m3">
+                            <h5>Users</h5>
+                            <ul id="user-list"></ul>
+                        </div>
 
-            <h5>Users</h5>
-            <ul id="user-list"></ul>
-               <form id="chat-message-form">
+                        <!-- Messages -->
+                        <div class="col s12 m9">
+                            <div class="message-area">
+                                <ul id="messages"></ul>
 
-                  <input id="userMessage" autocomplete="off" />
-                  <button>Send</button>
-               </form>
-            </section>
+                            </div>
 
-         </div>
-      </div>
+                            <div class="container-fluid">
+
+                                <div class="row">
+                                    <form id="chat-message-form">
+                                        <div class="input-field inline col s12">
+                                            <input id="userMessage" autocomplete="off" />
+                                            <button class="btn">Send</button>
+
+                                        </div>
+                                    </form>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </section>
+
+                </div>
+
+            </div>
+        </div>
 
     </main>
 
@@ -58,6 +86,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.0/jquery.min.js" charset="utf-8"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
     <script src="/js/client.js" charset="utf-8"></script>
-  </body>
+</body>
 
 </html>

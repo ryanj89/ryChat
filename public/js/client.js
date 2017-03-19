@@ -5,7 +5,7 @@ $(() => {
 
   // Connected to chat
   socket.on('connect', () => {
-    $msgList.append($('<li>').text('Connected to ryChat'));
+    $msgList.append($('<h5>').text('Connected to ryChat'));
   });
 
   // Update users list
