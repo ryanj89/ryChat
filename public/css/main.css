@@ -1,31 +1,33 @@
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box; }
 
 body {
-  font: 13px Helvetica, Arial; }
+  font-family: 'Lato', sans-serif;
+  background-color: #086375; }
 
-form {
+nav {
+  background-color: #005377; }
+
+.new-user-card {
+  color: #1DD3B0;
+  text-align: center;
+  background: #005377; }
+
+#new-user-form {
+  margin: 15px; }
+
+#new-user-btn {
+  width: 100%; }
+
+.chat-section {
+  margin-top: 0; }
+
+#chat-message-form {
   background: #465765;
   padding: 3px;
   position: fixed;
   bottom: 0;
   width: 100%; }
-
-form input {
-  border: 1px solid #DEDEDE;
-  border-radius: 5px;
-  padding: 10px;
-  width: 90%;
-  margin-right: .5%; }
-
-form button {
-  width: 9%;
-  background: #4286f4;
-  border: 1px solid #DEDEDE;
-  border-radius: 5px;
-  padding: 10px; }
 
 #messages {
   list-style-type: none;
@@ -33,9 +35,7 @@ form button {
   padding: 0; }
 
 #messages li {
+  background: #fcfcfc;
   padding: 5px 10px; }
-
-#messages li:nth-child(odd) {
-  background: #fcfcfc; }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ryChat</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+
+  <body>
+
+    <main>
+      <div class="container-fluid">
+         <div class="row">
+
+            <!-- New user Section -->
+            <section class="new-user-card section card col s12">
+                <h4>Welcome to ryChat!</h4>
+                <br>
+                <h5>Please enter your name to get started:</h5>
+                <form id="new-user-form">
+                   <div class="input-field">
+
+                      <input id="user-name" type="text" name="user-name" autocomplete="off">
+                   </div>
+                   <button id="new-user-btn" class="waves-effect waves-light btn" type="submit">Let's Go!</button>
+                </form>
+            </section>
+
+            <!-- Chat section -->
+            <section class="chat-section hide section">
+
+            <!-- Messages -->
+            <ul id="messages"></ul>
+
+            <h5>Users</h5>
+            <ul id="user-list"></ul>
+               <form id="chat-message-form">
+
+                  <input id="userMessage" autocomplete="off" />
+                  <button>Send</button>
+               </form>
+            </section>
+
+         </div>
+      </div>
+
+    </main>
+
+    <!-- Scripts -->
+    <script src="/socket.io/socket.io.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.0/jquery.min.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+    <script src="/js/client.js" charset="utf-8"></script>
+  </body>
+
+</html>

@@ -1,36 +1,65 @@
+$orange: #FF6B35;
+$blue: #005377;
+$blue-green: #086375;
+$teal: #1DD3B0;
+$dark-grey: #384D48;
+
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing:
-  border-box;
+  box-sizing: border-box;
 }
 
 body {
-  font: 13px Helvetica, Arial;
+  font-family: 'Lato', sans-serif;
+  background-color: $blue-green;
 }
 
-form {
+// input {
+//   border: 1px solid #DEDEDE;
+//   border-radius: 5px;
+//   padding: 10px;
+//   width: 90%;
+//   margin-right: .5%;
+// }
+
+// button {
+//   width: 9%;
+//   background: #4286f4;
+//   border: 1px solid #DEDEDE;
+//   border-radius: 5px;
+//   padding: 10px;
+// }
+
+// Navigation
+nav {
+  background-color: $blue;
+}
+
+// User Sign up
+.new-user-card {
+  color: $teal;
+  text-align: center;
+  background: $blue;
+}
+
+#new-user-form {
+  margin: 15px;
+}
+
+#new-user-btn {
+  width: 100%;
+}
+
+// Chat room
+.chat-section {
+  margin-top: 0;
+}
+
+#chat-message-form {
   background: #465765;
   padding: 3px;
   position: fixed;
   bottom: 0;
   width: 100%;
-}
-
-form input {
-  border: 1px solid #DEDEDE;
-  border-radius: 5px;
-  padding: 10px;
-  width: 90%;
-  margin-right: .5%;
-}
-
-form button {
-  width: 9%;
-  background: #4286f4;
-  border: 1px solid #DEDEDE;
-  border-radius: 5px;
-  padding: 10px;
 }
 
 #messages {
@@ -40,9 +69,9 @@ form button {
 }
 
 #messages li {
+  background: #fcfcfc;
   padding: 5px 10px;
 }
 
 #messages li:nth-child(odd) {
-  background: #fcfcfc;
 }

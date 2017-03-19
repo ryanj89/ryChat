@@ -1,22 +1,46 @@
 $(() => {
-   const socket = io();
-   const $msgList = $('#messages');
+  const socket = io();
+  const $msgList = $('#messages');
+  const $userList = $('#user-list');
 
-   socket.on('connect', () => {
-     $msgList.append($('<li>').text('connected'));
-   });
+  // Connected to chat
+  socket.on('connect', () => {
+    $msgList.append($('<li>').text('Connected to ryChat'));
+  });
 
-   $('form').submit(() => {
-      socket.emit('chat message', $('#userMessage').val());
-      $('#userMessage').val('');
-      return false;
-   });
+  // Update users list
+  socket.on('update users', (user) => {
+    console.log(user);
+    $msgList.append($('<li>').text(`${user} has joined the chat.`));
+    $userList.append($('<li>').text(user));
+  });
 
-   socket.on('chat message', (msg) => {
-      $msgList.append($('<li>').text(msg));
-   });
+  // Get new chat message
+  socket.on('chat message', (user, msg) => {
+    $msgList.append($('<li>').text(`${user}: ${msg}`));
+  });
 
-   socket.on('disconnect', () => {
-     $msgList.append($('<li>').text('user disconnected'));
-   });
+  // User disconnected
+  socket.on('disconnect', (name, users) => {
+    $msgList.append($('<li>').text(`${name} has left the chat.`));
+    console.log(users);
+
+  });
+
+  // Create user name
+  $('#new-user-form').submit((e) => {
+    e.preventDefault();
+    const $name = $('#user-name').val();
+    socket.emit('new user', $name);
+    $('.new-user-card').addClass('hide');
+    $('.chat-section').removeClass('hide');
+    $userList.append($('<li>').text($name));
+  });
+
+  // Send new chat message
+  $('#chat-message-form').submit(() => {
+    socket.emit('chat message', $('#userMessage').val());
+    $('#userMessage').val('');
+    return false;
+  });
 });
